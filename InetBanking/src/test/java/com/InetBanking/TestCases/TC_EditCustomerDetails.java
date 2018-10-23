@@ -1,3 +1,5 @@
-public static class EditCustomerDetails
+public class TC_EditCustomerDetails
 {
+	
+	//file is edited by Local machine.
 }
