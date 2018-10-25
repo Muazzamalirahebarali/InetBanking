@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="InetBanking" duration-ms="961" started-at="2018-10-23T10:05:36Z" finished-at="2018-10-23T10:05:37Z">
+  <suite name="InetBanking" duration-ms="561" started-at="2018-10-23T15:23:54Z" finished-at="2018-10-23T15:23:55Z">
     <groups>
     </groups>
-    <test name="Banking ApplicationTest2" duration-ms="961" started-at="2018-10-23T10:05:36Z" finished-at="2018-10-23T10:05:37Z">
+    <test name="Banking ApplicationTest2" duration-ms="561" started-at="2018-10-23T15:23:54Z" finished-at="2018-10-23T15:23:55Z">
       <class name="com.InetBanking.TestCases.Tc_LoginDDT_002">
-        <test-method status="FAIL" signature="Setup(java.lang.String)[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="Setup" is-config="true" duration-ms="402" started-at="2018-10-23T10:05:37Z" finished-at="2018-10-23T10:05:37Z">
+        <test-method status="FAIL" signature="Setup(java.lang.String)[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="Setup" is-config="true" duration-ms="153" started-at="2018-10-23T15:23:54Z" finished-at="2018-10-23T15:23:54Z">
           <params>
             <param index="0">
               <value>
@@ -63,13 +63,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="loginDDT(java.lang.String, java.lang.String)[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="loginDDT" duration-ms="0" started-at="2018-10-23T10:05:37Z" data-provider="LoginData" finished-at="2018-10-23T10:05:37Z">
+        <test-method status="SKIP" signature="loginDDT(java.lang.String, java.lang.String)[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="loginDDT" duration-ms="0" started-at="2018-10-23T15:23:55Z" data-provider="LoginData" finished-at="2018-10-23T15:23:55Z">
           <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[org.apache.poi.openxml4j.exceptions.ODFNotOfficeXmlFileException: The supplied data appears to be in ODF (Open Document) Format. Formats like these (eg ODS, ODP) are not supported, try Apache ODFToolkit]]>
+              <![CDATA[org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: org.apache.poi.openxml4j.exceptions.ODFNotOfficeXmlFileException: The supplied data appears to be in ODF (Open Document) Format. Formats like these (eg ODS, ODP) are not supported, try Apache ODFToolkit
+              <![CDATA[java.lang.RuntimeException: org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
 at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
 at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
 at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
@@ -93,13 +93,13 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.apache.poi.openxml4j.exceptions.ODFNotOfficeXmlFileException: The supplied data appears to be in ODF (Open Document) Format. Formats like these (eg ODS, ODP) are not supported, try Apache ODFToolkit
-at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:267)
-at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:725)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:301)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:37)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:307)
-at com.InetBanking.Utilities.XLUtils.getRowCount(XLUtils.java:39)
+Caused by: org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
+at org.apache.poi.poifs.storage.HeaderBlock.<init>(HeaderBlock.java:130)
+at org.apache.poi.poifs.storage.HeaderBlock.<init>(HeaderBlock.java:117)
+at org.apache.poi.poifs.filesystem.POIFSFileSystem.<init>(POIFSFileSystem.java:294)
+at org.apache.poi.hssf.usermodel.HSSFWorkbook.<init>(HSSFWorkbook.java:401)
+at org.apache.poi.hssf.usermodel.HSSFWorkbook.<init>(HSSFWorkbook.java:382)
+at com.InetBanking.Utilities.XLUtils.getRowCount(XLUtils.java:40)
 at com.InetBanking.TestCases.Tc_LoginDDT_002.getData(Tc_LoginDDT_002.java:70)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -115,7 +115,7 @@ at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(Met
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginDDT -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="teardown" is-config="true" duration-ms="0" started-at="2018-10-23T10:05:37Z" finished-at="2018-10-23T10:05:37Z">
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="teardown" is-config="true" duration-ms="0" started-at="2018-10-23T15:23:55Z" finished-at="2018-10-23T15:23:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

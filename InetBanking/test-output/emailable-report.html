@@ -9,9 +9,9 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">InetBanking</th></tr>
-<tr><td><a href="#t0">Banking ApplicationTest2</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">961</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Banking ApplicationTest2</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">561</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">InetBanking</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Banking ApplicationTest2 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.InetBanking.TestCases.Tc_LoginDDT_002</td><td><a href="#m0">Setup</a></td><td rowspan="1">1540289137197</td><td rowspan="1">402</td></tr><tr><th colspan="4">Banking ApplicationTest2 &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.InetBanking.TestCases.Tc_LoginDDT_002</td><td><a href="#m1">teardown</a></td><td rowspan="1">1540289137847</td><td rowspan="1">0</td></tr><tr><th colspan="4">Banking ApplicationTest2 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.InetBanking.TestCases.Tc_LoginDDT_002</td><td><a href="#m2">loginDDT</a></td><td rowspan="1">1540289137827</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">InetBanking</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Banking ApplicationTest2 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.InetBanking.TestCases.Tc_LoginDDT_002</td><td><a href="#m0">Setup</a></td><td rowspan="1">1540308234789</td><td rowspan="1">153</td></tr><tr><th colspan="4">Banking ApplicationTest2 &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.InetBanking.TestCases.Tc_LoginDDT_002</td><td><a href="#m1">teardown</a></td><td rowspan="1">1540308235068</td><td rowspan="1">0</td></tr><tr><th colspan="4">Banking ApplicationTest2 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.InetBanking.TestCases.Tc_LoginDDT_002</td><td><a href="#m2">loginDDT</a></td><td rowspan="1">1540308235032</td><td rowspan="1">0</td></tr></tbody>
 </table>
 <h2>Banking ApplicationTest2</h2><h3 id="m0">com.InetBanking.TestCases.Tc_LoginDDT_002#Setup</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Firefox</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable does not exist: /home/midt-060/Documents/Automation-Scripts/InetBanking/Drivers/geckodriver
 	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
@@ -26,14 +26,14 @@
 	at com.InetBanking.TestCases.TestBase.Setup(TestBase.java:50)
 ... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">com.InetBanking.TestCases.Tc_LoginDDT_002#teardown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.InetBanking.TestCases.Tc_LoginDDT_002#loginDDT</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: org.apache.poi.openxml4j.exceptions.ODFNotOfficeXmlFileException: The supplied data appears to be in ODF (Open Document) Format. Formats like these (eg ODS, ODP) are not supported, try Apache ODFToolkit
-Caused by: org.apache.poi.openxml4j.exceptions.ODFNotOfficeXmlFileException: The supplied data appears to be in ODF (Open Document) Format. Formats like these (eg ODS, ODP) are not supported, try Apache ODFToolkit
-	at org.apache.poi.openxml4j.opc.ZipPackage.getPartsImpl(ZipPackage.java:267)
-	at org.apache.poi.openxml4j.opc.OPCPackage.getParts(OPCPackage.java:725)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:301)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:37)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:307)
-	at com.InetBanking.Utilities.XLUtils.getRowCount(XLUtils.java:39)
+<h3 id="m2">com.InetBanking.TestCases.Tc_LoginDDT_002#loginDDT</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
+Caused by: org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
+	at org.apache.poi.poifs.storage.HeaderBlock.&lt;init&gt;(HeaderBlock.java:130)
+	at org.apache.poi.poifs.storage.HeaderBlock.&lt;init&gt;(HeaderBlock.java:117)
+	at org.apache.poi.poifs.filesystem.POIFSFileSystem.&lt;init&gt;(POIFSFileSystem.java:294)
+	at org.apache.poi.hssf.usermodel.HSSFWorkbook.&lt;init&gt;(HSSFWorkbook.java:401)
+	at org.apache.poi.hssf.usermodel.HSSFWorkbook.&lt;init&gt;(HSSFWorkbook.java:382)
+	at com.InetBanking.Utilities.XLUtils.getRowCount(XLUtils.java:40)
 	at com.InetBanking.TestCases.Tc_LoginDDT_002.getData(Tc_LoginDDT_002.java:70)
 	... 22 more
 ... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>

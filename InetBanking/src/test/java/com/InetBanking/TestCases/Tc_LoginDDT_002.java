@@ -64,7 +64,7 @@ public class Tc_LoginDDT_002 extends TestBase
 	{
 		
 		
-		String path=System.getProperty("user.dir")+"/src/test/java/Com/InetBanking/TestData/LoginData.xlsx";
+		String path=System.getProperty("user.dir")+"/src/test/java/Com/InetBanking/TestData/LoginData.ods";
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%"+path);
 
 		int rowcount=XLUtils.getRowCount(path,"sheet1");
