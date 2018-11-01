@@ -7,13 +7,13 @@
   <test thread-count="5" name="Banking ApplicationTest2(failed)">
     <parameter name="Browser" value="Firefox"/>
     <classes>
-      <class name="com.InetBanking.TestCases.Tc_LoginDDT_002">
+      <class name="com.InetBanking.TestCases.Tc_LoginTest_001">
         <methods>
+          <include name="IsLogedIn"/>
           <include name="Setup"/>
           <include name="teardown"/>
-          <include name="loginDDT"/>
         </methods>
-      </class> <!-- com.InetBanking.TestCases.Tc_LoginDDT_002 -->
+      </class> <!-- com.InetBanking.TestCases.Tc_LoginTest_001 -->
     </classes>
   </test> <!-- Banking ApplicationTest2(failed) -->
 </suite> <!-- Failed suite [InetBanking] -->

@@ -9,7 +9,8 @@ public class ReadConfig {
 	
 	Properties pro;
 	
-	public ReadConfig() {
+	public ReadConfig()//CREATE a Constructor
+	{
 		File src=new File("./Configuration/config.properties");
 		
 		try {
@@ -26,6 +27,18 @@ public class ReadConfig {
 		return URL;
 		
 	}
+	public String getChromePath() {
+		String chromepath=pro.getProperty("Chromepath");
+		return chromepath;
+		
+	}
+	
+	public String getFirefoxPath() {
+		String firefoxpath=pro.getProperty("Firefoxpath");
+		return firefoxpath;
+		
+	}
+	
 	public String getUsername() {
 		String username=pro.getProperty("Configusername");
 		return username;
@@ -36,18 +49,15 @@ public class ReadConfig {
 		return password;
 		
 	}
-	
-	public String getChromePath() {
-		String chromepath=pro.getProperty("chromepath");
-		return chromepath;
+	public String getTransporterUsername() {
+		String username=pro.getProperty("ConfigTransporterusername");
+		return username;
 		
 	}
-	
-	public String getFirefoxPath() {
-		String firefoxpath=pro.getProperty("firefoxpath");
-		return firefoxpath;
+	public String getTransporterPassword() {
+		String password=pro.getProperty("ConfigTransporterpassword");
+		return password;
 		
 	}
-	
 	
 }

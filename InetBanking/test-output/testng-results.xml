@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="InetBanking" duration-ms="561" started-at="2018-10-23T15:23:54Z" finished-at="2018-10-23T15:23:55Z">
+  <suite name="InetBanking" duration-ms="368" started-at="2018-11-01T07:33:53Z" finished-at="2018-11-01T07:33:54Z">
     <groups>
     </groups>
-    <test name="Banking ApplicationTest2" duration-ms="561" started-at="2018-10-23T15:23:54Z" finished-at="2018-10-23T15:23:55Z">
-      <class name="com.InetBanking.TestCases.Tc_LoginDDT_002">
-        <test-method status="FAIL" signature="Setup(java.lang.String)[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="Setup" is-config="true" duration-ms="153" started-at="2018-10-23T15:23:54Z" finished-at="2018-10-23T15:23:54Z">
+    <test name="Banking ApplicationTest2" duration-ms="368" started-at="2018-11-01T07:33:53Z" finished-at="2018-11-01T07:33:54Z">
+      <class name="com.InetBanking.TestCases.Tc_LoginTest_001">
+        <test-method status="FAIL" signature="Setup(java.lang.String)[pri:0, instance:com.InetBanking.TestCases.Tc_LoginTest_001@7a765367]" name="Setup" is-config="true" duration-ms="110" started-at="2018-11-01T07:33:54Z" finished-at="2018-11-01T07:33:54Z">
           <params>
             <param index="0">
               <value>
@@ -30,7 +30,7 @@ at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.
 at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:158)
 at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
 at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
-at com.InetBanking.TestCases.TestBase.Setup(TestBase.java:50)
+at com.InetBanking.TestCases.TestBase.Setup(TestBase.java:59)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -63,21 +63,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="SKIP" signature="loginDDT(java.lang.String, java.lang.String)[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="loginDDT" duration-ms="0" started-at="2018-10-23T15:23:55Z" data-provider="LoginData" finished-at="2018-10-23T15:23:55Z">
-          <exception class="java.lang.RuntimeException">
+        <test-method status="SKIP" signature="IsLogedIn()[pri:0, instance:com.InetBanking.TestCases.Tc_LoginTest_001@7a765367]" name="IsLogedIn" duration-ms="0" started-at="2018-11-01T07:33:54Z" finished-at="2018-11-01T07:33:54Z">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)]]>
+              <![CDATA[The driver executable does not exist: /home/midt-060/Documents/Automation-Scripts/InetBanking/Drivers/geckodriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
-at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:49)
-at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: /home/midt-060/Documents/Automation-Scripts/InetBanking/Drivers/geckodriver
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:136)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:131)
+at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:41)
+at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:141)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:339)
+at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:158)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at com.InetBanking.TestCases.TestBase.Setup(TestBase.java:59)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -93,33 +106,17 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.apache.poi.poifs.filesystem.OfficeXmlFileException: The supplied data appears to be in the Office 2007+ XML. You are calling the part of POI that deals with OLE2 Office Documents. You need to call a different part of POI to process this data (eg XSSF instead of HSSF)
-at org.apache.poi.poifs.storage.HeaderBlock.<init>(HeaderBlock.java:130)
-at org.apache.poi.poifs.storage.HeaderBlock.<init>(HeaderBlock.java:117)
-at org.apache.poi.poifs.filesystem.POIFSFileSystem.<init>(POIFSFileSystem.java:294)
-at org.apache.poi.hssf.usermodel.HSSFWorkbook.<init>(HSSFWorkbook.java:401)
-at org.apache.poi.hssf.usermodel.HSSFWorkbook.<init>(HSSFWorkbook.java:382)
-at com.InetBanking.Utilities.XLUtils.getRowCount(XLUtils.java:40)
-at com.InetBanking.TestCases.Tc_LoginDDT_002.getData(Tc_LoginDDT_002.java:70)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
-at org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:45)
-... 22 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginDDT -->
-        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.InetBanking.TestCases.Tc_LoginDDT_002@610694f1]" name="teardown" is-config="true" duration-ms="0" started-at="2018-10-23T15:23:55Z" finished-at="2018-10-23T15:23:55Z">
+        </test-method> <!-- IsLogedIn -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.InetBanking.TestCases.Tc_LoginTest_001@7a765367]" name="teardown" is-config="true" duration-ms="0" started-at="2018-11-01T07:33:54Z" finished-at="2018-11-01T07:33:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.InetBanking.TestCases.Tc_LoginDDT_002 -->
+      </class> <!-- com.InetBanking.TestCases.Tc_LoginTest_001 -->
     </test> <!-- Banking ApplicationTest2 -->
   </suite> <!-- InetBanking -->
 </testng-results>

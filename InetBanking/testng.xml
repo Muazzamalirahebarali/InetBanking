@@ -13,8 +13,9 @@
   
   <parameter name="Browser" value="Firefox"/>
   <classes>
-  <class name="com.InetBanking.TestCases.Tc_LoginDDT_002"/>  
-<!--    <class name="com.InetBanking.TestCases.Tc_LoginTest_001"/>  --> 
+ <class name="com.InetBanking.TestCases.Tc_LoginTest_001"/>   
+   <!-- <class name="com.InetBanking.TestCases.Tc_LoginDDT_002"/>  -->
+
  <!-- <class name="com.InetBanking.TestCases.Tc_Addcustomer_003"/> -->
   </classes>
   

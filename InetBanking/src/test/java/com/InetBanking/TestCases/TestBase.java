@@ -14,9 +14,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import com.InetBanking.PageObjects.LoginPage;
 import com.InetBanking.Utilities.ReadConfig;
 
 public class TestBase {
@@ -26,10 +29,16 @@ public class TestBase {
 	public String BaseURL=readconfig.getApplicationURL();
 	public String Tbusername=readconfig.getUsername();
 	public String Tbpassword=readconfig.getPassword();
+	public String Transporterusername=readconfig.getTransporterUsername();
+	public String Transporterpassword=readconfig.getTransporterPassword();
+	
 	
 	WebDriver driver;
 	
-	public static Logger logger;//adding logs
+	public static Logger logger;//adding logs one logger instance per class
+	
+	LoginPage lpObject=new LoginPage(driver);
+	
 @Parameters("Browser")
 @BeforeClass
 	public void Setup(String br)
@@ -56,6 +65,30 @@ public class TestBase {
 
 	}
 	
+/*@Parameters("User")
+@BeforeTest
+public void Login(String user) {
+	
+if(user.equals("Transporter"))
+{
+lpObject.SetUsername(Transporterusername);
+lpObject.SetPassword(Transporterpassword);
+lpObject.clickLoginButton();
+}
+else if(user.equals("Shipper")){
+	lpObject.SetUsername(Tbusername);
+	lpObject.SetPassword(Tbpassword);
+	lpObject.clickLoginButton();
+	
+}
+	
+}
+
+@AfterTest
+public void Logout() {
+	lpObject.clickLoginButton();
+}
+*/
 		
 	@AfterClass
 	public void teardown() {
